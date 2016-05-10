@@ -20,11 +20,11 @@ public class BasketTest {
         final Basket basket = new Basket();
         List fruits = asList(BANANAS,APPLES);
         basket.addMultipleFruit(fruits);
-        Assert.assertEquals(3, basket.calculateBasket());
+        Assert.assertEquals(4, basket.calculateBasket(),0);
         basket.addFruit(ORANGES);
-        Assert.assertEquals(3+3, basket.calculateBasket());
+        Assert.assertEquals(4+3, basket.calculateBasket(),0);
         basket.addMultipleFruit(asList(PEACHES,LEMONS));
-        Assert.assertEquals(3+3+4+5, basket.calculateBasket());
+        Assert.assertEquals(4+3+4+5, basket.calculateBasket(),0);
     }
 }
 

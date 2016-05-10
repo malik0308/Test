@@ -11,11 +11,11 @@ public class Basket {
     private List<Fruit> fruitList = new ArrayList<>();
 
     public enum Fruit{
-        BANANAS(1), APPLES(2), ORANGES(3),PEACHES(4),LEMONS(5);
+        BANANAS(1.5), APPLES(2.5), ORANGES(3),PEACHES(4),LEMONS(5);
 
-        private int price;
+        private double price;
 
-        private Fruit(final int price){
+        private Fruit(final double price){
             this.price = price;
         }
 
@@ -29,7 +29,7 @@ public class Basket {
         fruitList.add(fruit);
     }
 
-    public int calculateBasket(){
-        return fruitList.stream().mapToInt(f -> f.price).sum();
+    public double calculateBasket(){
+        return fruitList.stream().mapToDouble(f -> f.price).sum();
     }
 }
